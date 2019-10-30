@@ -45,24 +45,24 @@ private WebDriver driver;
   public void testUntitledTestCase() throws Exception {
       driver.get(URL);
       
-      WebElement element= driver.findElement(By.id("email"));
+      WebElement element= driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/form/div/div[1]/input"));
       
       element.sendKeys("adan_dc10@hotmail.com");
       
-      element= driver.findElement(By.id("pass"));
+      element= driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/form/div/div[2]/input"));
       
       element.sendKeys("popo");
       
       element= driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/form/div/div[3]/button"));
       element.click();
-      WebElement button1 = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/form/div/div[3]/button"));
-     //that new element will point to the same element in the new DOM
-      button1.click();
-      
 
-      
+       pause(50000);
+       
+       element.findElement(By.xpath("/html/body/div[1]/div[3]/div[1]/div/div/div[2]/form/div/div[2]/input"));
+       element.click();
+       pause(50000);
+      //error
       element.findElement(By.xpath("/html/body/div[1]/div[3]/div[3]/div/div/div"));
-      
       String error= element.getText();
       
       
