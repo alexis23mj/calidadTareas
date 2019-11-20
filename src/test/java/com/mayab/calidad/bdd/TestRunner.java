@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Features;
+package com.mayab.calidad.bdd;
 
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
